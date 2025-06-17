@@ -16,7 +16,7 @@ export const LoginRegister = React.memo(() => {
     return (
         <div className='auth-wrapper'>
             <div className='auth-container'>
-                <h2 className='form-title'>{isLoginView ? 'Login' : 'Register'}</h2>
+                <h2 className='form-title'>Authenticate</h2>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
