@@ -1,0 +1,27 @@
+.fixed-background {
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.city-background {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.moon {
+  position: fixed;
+  top: 1%;
+  left: 16%;
+  transform: translateX(-50%);
+  width: 239px;
+  height: auto;
+  transition: opacity 1s ease;
+}

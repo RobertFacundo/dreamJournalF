@@ -1,0 +1,150 @@
+.auth-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    background-color: rgba(13, 13, 43, 0.6);
+    backdrop-filter: blur(6px);
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #ffffff22;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: fadeInScale 1.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    .form-title {
+        letter-spacing: 3px;
+        border-bottom: 2px solid rgba(188, 182, 182, 0.2);
+        padding-bottom: 5px;
+        width: 100%;
+    }
+
+    form {
+        background: #ffffff10;
+        border: 1px solid #ffffff22;
+        font-family: 'Dancing Script', cursive;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        min-width: 300px;
+        animation: fadeInScale 1.5s ease-out;
+
+        input {
+            padding: 0.8rem;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 8px;
+            background-color: #ffffff15;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            text-align: center;
+
+            &::placeholder {
+                color: #ffffff99;
+            }
+        }
+
+        .input-wrapper {
+            position: relative;
+
+            .toggle-password {
+                position: absolute;
+                top: 50%;
+                right: 0.2rem;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                font-size: 1.3rem;
+                color: #fff;
+                cursor: pointer;
+                transition: transform 0.2s;
+
+                &:hover {
+                    transform: translateY(-50%) scale(1.1);
+                }
+            }
+        }
+
+        .form-button {
+            background-color: rgba(85, 49, 132, 0.4);
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+            color: white;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.8s;
+            letter-spacing: 3px;
+
+            &:hover {
+                background-color: rgba(85, 49, 132, 0.7);
+            }
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: white;
+        }
+    }
+
+    h2 {
+        color: white;
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+        letter-spacing: 0.5px;
+
+        button {
+            background: none;
+            color: #90caf9;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

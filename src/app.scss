@@ -1,0 +1,15 @@
+html, body {
+  overflow-x: hidden;   // evita scroll horizontal
+  overflow-y: auto;     // permite scroll vertical
+  scrollbar-width: none;         // Firefox
+}
+
+body::-webkit-scrollbar {
+  display: none;        // Chrome, Safari, Edge
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

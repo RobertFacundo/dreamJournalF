@@ -1,0 +1,75 @@
+.parallax-container {
+  overflow-y: hidden;
+  position: relative;
+  height: 1200vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #0d0d2b;
+}
+
+.city-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.moon {
+  position: fixed;
+  left: 16%;
+  transform: translateX(-50%);
+  width: 239px;
+  height: auto;
+  transition: opacity 1s ease;
+}
+
+.scroll-message {
+  position: fixed;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+
+  .scroll-text {
+    font-size: 1.7rem;
+    font-family: "Comic Relief", system-ui;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeInText 2s ease-in-out infinite alternate;
+  }
+
+  .scroll-icon {
+    animation: bounce 2s infinite;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
