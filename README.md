@@ -1,12 +1,67 @@
-# React + Vite
+# 📘 Dream Journal — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated interface for a dream journal app. Includes user authentication and a parallax scrolling effect that gradually reveals the moon in a night sky. Built to integrate with a NestJS backend, this frontend provides an immersive and polished experience from the first scroll.
 
-Currently, two official plugins are available:
+--- 
+## 🌙 Live Demo
+🔗 **Frontend App (Live)**: [https://dream-journal-f.vercel.app/](https://dream-journal-f.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18 — Core UI library
+
+- React Router DOM — Routing between views
+
+- SCSS — Custom styles and animations
+
+- Vercel — Frontend hosting
+
+- Parallax + Opacity Animation — Smooth scroll-triggered transitions
+
+- User Authentication — Connected to a NestJS backend
+
+---
+
+## 🧠 Key Features
+- Parallax intro animation: Users must scroll to reveal the moon. Once fully visible, scrolling is disabled and the app loads.
+
+- Dynamic authentication UI: Easily switch between login and register, with real-time feedback and emoji-based toggle (😴 / 💤).
+
+- Immersive design: Fonts, colors, and shadows evoke calmness and dream-like visuals.
+
+- Modular architecture: Clean, reusable component and hook structure.
+
+----
+
+## 📁 Project Structure
+
+```bash
+src/
+├── views/
+│   ├── Auth.jsx               # Authentication screen
+│   ├── Home.jsx               # Main user view
+│   ├── Profile.jsx            # User profile page
+│   └── ParallaxBackground.jsx # Animated intro scroll view
+├── components/
+│   └── Authentication/
+│       └── LoginRegister.jsx  # Login/Register form
+│   └── Background/
+│       └── FixedBackground.jsx # Static background after parallax completes
+├── hooks/
+│   └── useParallaxBackground.js # Handles scroll + opacity animation
+│   └── useAuthentication.js     # Login/Register logic
+├── app.scss
+└── App.jsx                    # Routes & core app logic
+```
+
+---
+
+## 📬 Contact
+
+Created by **Facundo Robert** – [GitHub](https://github.com/RobertFacundo)  
+
+Feel free to reach out for collaboration or feedback!!
+
+----
