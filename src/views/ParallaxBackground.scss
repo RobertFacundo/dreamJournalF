@@ -41,10 +41,11 @@
 
   .scroll-text {
     font-size: 1.7rem;
-    font-family: "Comic Relief", system-ui;
-    letter-spacing: 3px;
+    font-family: 'Dancing Script';
+    letter-spacing: 6px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     animation: fadeInText 2s ease-in-out infinite alternate;
+    padding-bottom: 2rem;
   }
 
   .scroll-icon {

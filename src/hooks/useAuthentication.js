@@ -37,20 +37,22 @@ export function useAuth() {
         try {
             const response = await AuthServices(type, credentials);
 
-            console.log(response, 'log del handlesubmit');
-
-            const { user, token } = response;
-
+            const { user, acces_token } = response;
+ 
             if (user) {
                 localStorage.setItem('user', JSON.stringify(user))
             }
 
-            if (token) {
-                localStorage.setItem('token', token)
+            if (acces_token) {
+                localStorage.setItem('token', acces_token)
             }
 
+
+             console.log(user, 'log del handlesubmit');
+             console.log(acces_token, 'log del handlesubmit');
+
             navigate('/Home')
-            return { user, token }
+            return { user, acces_token }
         } catch (error) {
             console.error(error)
             throw error;

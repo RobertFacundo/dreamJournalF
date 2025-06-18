@@ -1,0 +1,52 @@
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(13, 13, 43, 0.162);
+    backdrop-filter: blur(6px);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 998;
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+
+        span {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    .navbar-links {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+            transition: color 0.3s;
+
+            &:hover {
+                color:  rgba(153, 99, 223, 0.7)
+            }
+        }
+    }
+}

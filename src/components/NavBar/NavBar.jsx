@@ -1,12 +1,15 @@
-import { div } from "framer-motion/client";
 import { Link } from "react-router-dom";
-
+import './NavBar.scss'
 
 export const NavBar = () => {
     return (
-        <div>
-            <Link to='/Home'>Home</Link>
-            <Link to='/Profile'>Profile</Link>
-        </div>
+        <nav className="navbar">
+            <div className="navbar-logo">
+            </div>
+            <div className="navbar-links">
+                <Link to='/Home'>Home</Link>
+                <Link to='/Profile'>Profile</Link>
+            </div>
+        </nav>
     )
 }
