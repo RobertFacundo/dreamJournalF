@@ -1,4 +1,4 @@
-import { Router, Routes, Route } from 'react-router-dom';
+import { Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Home } from './views/Home';
 import { Profile } from './views/Profile';
 import { useState } from 'react';
@@ -9,6 +9,10 @@ import { Auth } from './views/Authentication';
 
 function App() {
   const [parallaxDone, setParallaxDone] = useState(false);
+  const [showMoonModal, setShowMoonModal] = useState(false);
+
+  const location = useLocation();
+  const isHome = location.pathname === '/Home';
 
   return (
     <>
@@ -16,10 +20,10 @@ function App() {
         <ParallaxBackground onParallaxComplete={() => setParallaxDone(true)} />
       ) : (
         <>
-          <FixedBackground moonOpacity={1} />
+          <FixedBackground moonOpacity={1} onMoonClick={isHome ? () => { console.log('🌕 Luna clickeada'); setShowMoonModal(true) } : undefined} />
           <Routes>
-            <Route path='/' element={<Auth />} /> 
-            <Route path='/Home' element={<Home />} />
+            <Route path='/' element={<Auth />} />
+            <Route path='/Home' element={<Home showMoonModal={showMoonModal} setShowMoonModal={setShowMoonModal}/>} />
             <Route path='/Profile' element={<Profile />} />
           </Routes>
         </>

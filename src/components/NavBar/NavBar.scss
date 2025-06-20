@@ -34,6 +34,7 @@
     .navbar-links {
         display: flex;
         gap: 1.5rem;
+        animation: fadeInScale 1.6s ease-out;
 
         a {
             color: white;
@@ -45,8 +46,18 @@
             transition: color 0.3s;
 
             &:hover {
-                color:  rgba(153, 99, 223, 0.7)
+                color: rgba(153, 99, 223, 0.7)
             }
         }
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

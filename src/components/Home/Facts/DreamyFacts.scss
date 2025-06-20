@@ -1,0 +1,12 @@
+.dreamy-facts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* alineación natural de izquierda a derecha */
+  margin-left: 0;
+  /* eliminamos desplazamiento innecesario */
+  gap: 0.6rem;
+  /* eliminamos separación entre cartas */
+  pointer-events: auto;
+}

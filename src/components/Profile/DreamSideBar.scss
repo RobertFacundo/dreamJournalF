@@ -1,0 +1,73 @@
+.dream-sidebar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    overflow-y: auto;
+    padding-right: 0;
+    animation: fadeInScale 1.5s ease-out;
+
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE y Edge antiguos */
+
+    &::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+}
+
+.dream-card {
+    background-color: rgba(255, 255, 255, 0.164);
+    border-left: 4px solid #8f66ff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #4455aa44;
+    font-family: 'Buda', cursive;
+    color: #d1e8ff;
+    animation: fadeInScale 1.5s ease-out;
+}
+
+.dream-date {
+    font-size: 0.9rem;
+    color: #a2b4ff;
+    margin-bottom: 0.5rem;
+}
+
+.dream-content {
+    white-space: pre-line;
+    font-size: 1.1rem;
+}
+
+.dream-meta {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    color: #a2d3f5;
+}
+
+.lucidity {
+    font-weight: bold;
+}
+
+.mood {
+    font-style: italic;
+}
+
+.nightmare {
+    color: #ff6666;
+    font-weight: bold;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

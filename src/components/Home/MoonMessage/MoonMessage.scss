@@ -1,0 +1,78 @@
+.moon-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 21%;
+  z-index: 10;
+  pointer-events: none !important;
+  margin-top: 55px;
+  width: 100%;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.moon-text-left,
+.moon-text-right {
+  font-family: 'Buda', cursive;
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, #d1e8ff 0%, #a1c4fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 4px rgba(161, 196, 253, 0.3),
+    0 0 6px rgba(209, 232, 255, 0.2),
+    0 0 8px rgba(255, 255, 255, 0.2);
+
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  transform: translateX(0); /* está bien dejarlo */
+}
+
+/* Cada una con su animación combinada */
+.moon-text-left {
+  animation: glowPulse 8s ease-in-out infinite, fadeInLeft 1.6s ease-out forwards;
+}
+
+.moon-text-right {
+  animation: glowPulse 8s ease-in-out infinite, fadeInRight 1.6s ease-out forwards;
+}
+
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(161, 196, 253, 0.25),
+      0 0 6px rgba(209, 232, 255, 0.2),
+      0 0 8px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 6px rgba(161, 196, 253, 0.4),
+      0 0 10px rgba(209, 232, 255, 0.3),
+      0 0 12px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+}

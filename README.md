@@ -22,6 +22,8 @@ A modern, animated interface for a dream journal app. Includes user authenticati
 
 - User Authentication — Connected to a NestJS backend
 
+- react-calendar — Calendar UI component to visualize dreams
+
 ---
 
 ## 🧠 Key Features
@@ -32,6 +34,8 @@ A modern, animated interface for a dream journal app. Includes user authenticati
 - Immersive design: Fonts, colors, and shadows evoke calmness and dream-like visuals.
 
 - Modular architecture: Clean, reusable component and hook structure.
+  
+- Users can add one or more dreams, which are displayed interactively in a calendar within their profile page.
 
 ----
 
@@ -39,21 +43,68 @@ A modern, animated interface for a dream journal app. Includes user authenticati
 
 ```bash
 src/
-├── views/
-│   ├── Auth.jsx               # Authentication screen
-│   ├── Home.jsx               # Main user view
-│   ├── Profile.jsx            # User profile page
-│   └── ParallaxBackground.jsx # Animated intro scroll view
+├── assets/
+│   └── react.svg
 ├── components/
-│   └── Authentication/
-│       └── LoginRegister.jsx  # Login/Register form
-│   └── Background/
-│       └── FixedBackground.jsx # Static background after parallax completes
+│   ├── Authentication/
+│   │   ├── LoginRegister.jsx
+│   │   └── LoginRegister.scss
+│   ├── Background/
+│   │   ├── FixedBackground.jsx
+│   │   └── FixedBackground.scss
+│   ├── Home/
+│   │   ├── Facts/
+│   │   │   ├── DreamyFacts.jsx
+│   │   │   ├── DreamyFacts.scss
+│   │   │   ├── FactCard.jsx
+│   │   │   └── FactCard.scss
+│   │   ├── MoonMessage/
+│   │   │   ├── MoonMessage.jsx
+│   │   │   └── MoonMessage.scss
+│   │   ├── MoonModal/
+│   │   │   ├── MoonModal.jsx
+│   │   │   └── MoonModal.scss
+│   │   ├── REM/
+│   │   │   ├── RemInfo.jsx
+│   │   │   └── RemInfo.scss
+│   │   ├── HomeLayout.jsx
+│   │   ├── WelcomeModal.jsx
+│   │   └── WelcomeModal.scss
+│   ├── NavBar/
+│   │   ├── NavBar.jsx
+│   │   └── NavBar.scss
+│   └── Profile/
+│       ├── DreamCalendar.jsx
+│       ├── DreamCalendar.scss
+│       ├── DreamSideBar.jsx
+│       └── DreamSideBar.scss
+├── config/
+│   └── axiosConfig.js
+├── contexts/
+│   └── UserContext.jsx
 ├── hooks/
-│   └── useParallaxBackground.js # Handles scroll + opacity animation
-│   └── useAuthentication.js     # Login/Register logic
+│   ├── useAddDream.js
+│   ├── useAuthentication.js
+│   ├── useDreamForm.js
+│   ├── useModalVisibility.js
+│   ├── useParallaxBackground.js
+│   ├── useProfile.js
+│   └── useWelcomeModal.js
+├── services/
+│   ├── AuthServices.js
+│   ├── DreamServices.js
+│   └── UserServices.js
+├── views/
+│   ├── Authentication.jsx
+│   ├── Home.jsx
+│   ├── Home.scss
+│   ├── ParallaxBackground.jsx
+│   ├── ParallaxBackground.scss
+│   ├── Profile.jsx
+│   └── Profile.scss
 ├── app.scss
-└── App.jsx                    # Routes & core app logic
+├── App.jsx
+└── main.jsx
 ```
 
 ---
