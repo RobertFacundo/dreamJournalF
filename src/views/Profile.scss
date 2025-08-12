@@ -38,3 +38,21 @@
   }
 }
 
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column; 
+    height: auto; 
+    gap: 1rem; 
+    padding: 1rem;
+  }
+
+  .dream-sidebar,
+  .calendar-container {
+    flex: none; 
+    width: 100%; 
+    min-width: unset; 
+    max-height: none; 
+    overflow: visible; 
+  }
+}
+
